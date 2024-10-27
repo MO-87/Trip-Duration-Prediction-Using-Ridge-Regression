@@ -11,9 +11,9 @@ pd.options.display.max_rows = None
 
 
 if __name__ == '__main__':
-    train = pd.read_csv('Data/train.csv')
-    val = pd.read_csv('Data/val.csv')
-    test = pd.read_csv('Data/test.csv')
+    train = pd.read_csv('Sample_Data/train.csv')
+    val = pd.read_csv('Sample_Data/val.csv')
+    test = pd.read_csv('Sample_Data/test.csv')
 
     prepare_data(train)
     prepare_data(val)
@@ -34,11 +34,3 @@ if __name__ == '__main__':
 
     visualize(rmse, r2)
 
-
-    # # Apply feature engineering (assuming feature_engineering_data_for_approach2 returns a DataFrame)
-    # train = feature_engineering_data_for_approach2(train)
-    # train = pd.get_dummies(train, drop_first=True)
-    # # Calculate the correlation matrix for the target feature
-    # correlation_matrix = train.corr()
-    # target_corr = correlation_matrix['log_trip_duration'].sort_values(ascending=False)
-    # print(target_corr)
