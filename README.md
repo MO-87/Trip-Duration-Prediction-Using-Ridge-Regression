@@ -4,7 +4,7 @@
 This project aims to predict the trip duration of New York City taxi rides using the New York taxi dataset from Kaggle ( A variation of it, provided its source down in the aknowledgements ). The primary objective is to maximize the R² score without altering the baseline model architecture. I used Ridge regression with a fixed alpha of 1 across all approaches.
 
 ## Dataset
-The dataset used in this project is a variation based on the New York City taxi dataset, available on Kaggle. [Kaggle Dataset Link]([kaggle_dataset](https://www.kaggle.com/competitions/nyc-taxi-trip-duration))
+The dataset used in this project is a variation based on the New York City taxi dataset, available on Kaggle. [Kaggle Dataset Link](https://www.kaggle.com/competitions/nyc-taxi-trip-duration)
 
 ### Original Features
 The dataset originally included the following features:
@@ -37,6 +37,7 @@ I implemented three distinct approaches to achieve the prediction:
 
 ## Results
 For each approach, I calculated the Root Mean Squared Error (RMSE) and R² scores for the training, validation, and test datasets. The results are summarized below:
+
 **Note: these results is based on the whole Data which is not presented in this repo. ( just a sample of it provided to try models if wanted )**
 
 | Approach               | Train RMSE | Validation RMSE | Test RMSE | Train R² | Validation R² | Test R² |
@@ -49,10 +50,10 @@ For each approach, I calculated the Root Mean Squared Error (RMSE) and R² score
 To illustrate the performance differences across approaches, I created two plots:
 
 1. **RMSE Comparison**
-   - ![RMSE Plot](models performance plots/RMSE.png)
+   - ![RMSE Plot](models_performance_plots/RMSE.png)
 
 2. **R² Score Comparison**
-   - ![R² Score Plot](models performance plots/R2_Score.png)
+   - ![R² Score Plot](models_performance_plots/R2_Score.png)
 
 ## Conclusion
 The introduction of engineered features like `haversine_distance` with its log, `distance_bucket`, `distance_hour_interaction`, and interaction terms significantly improved the model’s ability to capture trip duration nuances. Applying polynomial regression further boosted performance, demonstrating the value of feature engineering and transformation in predictive modeling.
